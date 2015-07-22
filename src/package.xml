@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://www.mendix.com/package/1.0/">
+	<clientModule name="iCheckRadioButtons" version="5.4.1" xmlns="http://www.mendix.com/clientModule/1.0/">
+		<widgetFiles>
+			<widgetFile path="iCheckRadioButtons/AttrRadioButtonList.xml"/>
+			<widgetFile path="iCheckRadioButtons/AssocRadioButtonList.xml"/>
+		</widgetFiles>
+		<files>
+			<file path="iCheckRadioButtons/widget/"/>
+		</files>
+	</clientModule>
+</package>

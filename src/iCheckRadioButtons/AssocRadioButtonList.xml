@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="iCheckRadioButtons.widget.AssocRadioButtonList" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+    <name>iCheck Radio Buttons (Association)</name>
+    <description>Creates an iCheck radiobutton list which will set an association value.</description>
+
+    <icon>iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGrSURBVDhPnZSxTsJQFIZpC4USEhoGWI2DmyExcfIBTPQF3Fx9B6ODxndwddMH0MHdxUFD4mTSpCsk0JJADYUWv9tzQxBU0D+knHPv//ece865NabTae6/+EYcRdFgMOA5mUxw8/l8uVyuVCo8hTDDF3Ecx51OJ0mSarUKtVAosDgej3lRv9+3LKter9u2LWQFxAIYnueFYaj9JQRBAAGa9okqf6PRiI3hcCjuT4AADbK4psRvt9u1Wm35VAuAAA2yuEpMJmmauq4rS78DGmQk2KpgFIkyzIvjJD27b929+pzraGfj8rBpWzpHQF0oLcXTkRcSPn9oXT+9B1EcfsQYV49veiMDZImsxPRTujLD7YuvrQw3z562MkCWEVBiwzCyxXXBScVQYmaISRBfwDm1leF4d1NbGQiLBEOJi8WinGGGi4Pmyd6W69j8ME73t/VGBsilUklZ5EDrfZ/CrgvIMk4qMtUzTZMGqJetAkMOWbqjxKDRaPR6vYXklwGh2+1C1r5kAtj468VYvJLMLdM3u5LsUlsEki0x56/kio8BI0BXHMdZ/TH4G3K5T6RGqTaMYIdtAAAAAElFTkSuQmCC</icon>
+
+    <properties>
+        <property key="dataSourceType" type="enumeration" defaultValue="xpath">
+            <caption>Data source type</caption>
+            <category>Data source</category>
+            <description>The method for retrieving the objects.</description>
+            <enumerationValues>
+                <enumerationValue key="xpath">XPath</enumerationValue>
+                <enumerationValue key="mf">Microflow</enumerationValue>
+            </enumerationValues>
+        </property>
+        <property key="RadioListObject" type="entity" required="true">
+            <caption>Entity to list</caption>
+            <category>Data source</category>
+            <description>The entity of which the radiobutton list will be composed.</description>
+        </property>
+        <property key="datasourceMf" type="microflow" required="false">
+            <caption>Data source microflow</caption>
+            <category>Data source (Microflow)</category>
+            <description></description>
+            <returnType type="Void" />
+        </property>
+        <property key="Constraint" type="entityConstraint" required="false" entityProperty="RadioListObject">
+            <caption>XPath constraint</caption>
+            <category>Data source (XPath)</category>
+            <description>Constrain the items to be shown in the radiobutton list</description>
+        </property>
+        <property key="sortAttr" type="attribute" entityProperty="RadioListObject" required="false">
+            <caption>Sort attribute(XPath)</caption>
+            <category>Data source (XPath)</category>
+            <description>This fields provides the sort attribute of the list.</description>
+            <attributeTypes>
+                <attributeType name="AutoNumber" />
+                <attributeType name="Boolean" />
+                <attributeType name="Currency" />
+                <attributeType name="DateTime" />
+                <attributeType name="Enum" />
+                <attributeType name="Float" />
+                <attributeType name="Integer" />
+                <attributeType name="Long" />
+                <attributeType name="String" />
+            </attributeTypes>
+        </property>
+        <property key="sortOrder" type="enumeration" defaultValue="asc">
+            <caption>Sort order(XPath)</caption>
+            <category>Data source</category>
+            <description>The sort order.</description>
+            <enumerationValues>
+                <enumerationValue key="asc">Ascending</enumerationValue>
+                <enumerationValue key="desc">Descending</enumerationValue>
+            </enumerationValues>
+        </property>
+        <property key="RadioListItemAttribute" type="attribute" required="true" entityProperty="RadioListObject">
+            <caption>Label attribute</caption>
+            <category>Data source</category>
+            <description>The attribute content will be used for the label of the radiobutton.</description>
+            <attributeTypes>
+                <attributeType name="String" />
+            </attributeTypes>
+        </property>
+        <property key="entity" type="entity" required="true" isPath="yes" pathType="reference">
+            <caption>Association</caption>
+            <category>Data source</category>
+            <description>Select the reference where the selected item will be saved(Entity must be of the same type as 'Entity to list').</description>
+        </property>
+        <property key="direction" type="enumeration" defaultValue="vertical">
+            <caption>Direction</caption>
+            <category>Behavior</category>
+            <description>This field determines the display direction.</description>
+            <enumerationValues>
+                <enumerationValue key="horizontal">Horizontal</enumerationValue>
+                <enumerationValue key="vertical">Vertical</enumerationValue>
+            </enumerationValues>
+        </property>
+        <property key="readonly" type="boolean" required="true" defaultValue="false">
+            <caption>Read only</caption>
+            <category>Behavior</category>
+            <description>If true, the widget is not editable.</description>
+        </property>
+        <property key="onchangeAction" type="microflow" required="false">
+            <caption>On change</caption>
+            <category>Events</category>
+            <description></description>
+            <returnType type="Void"></returnType>
+        </property>
+        <property key="iCheckStyle" type="enumeration" defaultValue="flat">
+            <caption>Style</caption>
+            <category>iCheck</category>
+            <description>The iCheck style for the radio buttons</description>
+            <enumerationValues>
+                <enumerationValue key="flat">Flat</enumerationValue>
+                <enumerationValue key="minimal">Minimal</enumerationValue>
+                <enumerationValue key="square">Square</enumerationValue>
+            </enumerationValues>
+        </property>
+        <property key="iCheckColor" type="enumeration" defaultValue="aero">
+            <caption>Color</caption>
+            <category>iCheck</category>
+            <description>The iCheck color for the radio buttons</description>
+            <enumerationValues>
+                <enumerationValue key="aero">Aero</enumerationValue>
+                <enumerationValue key="blue">Blue</enumerationValue>
+                <enumerationValue key="green">Green</enumerationValue>
+                <enumerationValue key="grey">Grey</enumerationValue>
+                <enumerationValue key="orange">Orange</enumerationValue>
+                <enumerationValue key="pink">Pink</enumerationValue>
+                <enumerationValue key="purple">Purple</enumerationValue>
+                <enumerationValue key="red">Red</enumerationValue>
+                <enumerationValue key="yellow">Yellow</enumerationValue>
+            </enumerationValues>
+        </property>
+    </properties>
+</widget>
+

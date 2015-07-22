@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="iCheckRadioButtons.widget.AttrRadioButtonList" needsEntityContext="true" xmlns="http://www.mendix.com/widget/1.0/">
+  <name>iCheck Radio Buttons (Attribute)</name>
+  <description>Creates an iCheck radiobutton list based on an enumeration or boolean attribute.</description>
+
+  <icon>iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGrSURBVDhPnZSxTsJQFIZpC4USEhoGWI2DmyExcfIBTPQF3Fx9B6ODxndwddMH0MHdxUFD4mTSpCsk0JJADYUWv9tzQxBU0D+knHPv//ece865NabTae6/+EYcRdFgMOA5mUxw8/l8uVyuVCo8hTDDF3Ecx51OJ0mSarUKtVAosDgej3lRv9+3LKter9u2LWQFxAIYnueFYaj9JQRBAAGa9okqf6PRiI3hcCjuT4AADbK4psRvt9u1Wm35VAuAAA2yuEpMJmmauq4rS78DGmQk2KpgFIkyzIvjJD27b929+pzraGfj8rBpWzpHQF0oLcXTkRcSPn9oXT+9B1EcfsQYV49veiMDZImsxPRTujLD7YuvrQw3z562MkCWEVBiwzCyxXXBScVQYmaISRBfwDm1leF4d1NbGQiLBEOJi8WinGGGi4Pmyd6W69j8ME73t/VGBsilUklZ5EDrfZ/CrgvIMk4qMtUzTZMGqJetAkMOWbqjxKDRaPR6vYXklwGh2+1C1r5kAtj468VYvJLMLdM3u5LsUlsEki0x56/kio8BI0BXHMdZ/TH4G3K5T6RGqTaMYIdtAAAAAElFTkSuQmCC</icon>
+
+  <properties>
+		<property key="entity" type="attribute" required="true">
+		  <caption>Target attribute</caption>
+		  <category>Data source</category>
+		  <description>The attribute which has to be rendered as a radiobutton list.</description> 
+		  <attributeTypes>
+			<attributeType name="Enum"/> 
+			<attributeType name="Boolean"/>
+		  </attributeTypes>
+		</property>
+		<property key="direction" type="enumeration" defaultValue="vertical">
+			<caption>Direction</caption>
+			<category>Behavior</category>
+			<description>This field determines the display direction of the radiobutton options.</description> 
+			<enumerationValues>
+				<enumerationValue key="horizontal">Horizontal</enumerationValue>
+				<enumerationValue key="vertical">Vertical</enumerationValue>
+			</enumerationValues>
+		</property>
+		<property key="captiontrue" type="translatableString" required="false">
+			<caption>True label (Boolean attribute)</caption>
+			<category>Behavior</category>
+			<description>In the case of the target attribute being a boolean, the text for the label can be defined here.</description>
+		</property>
+		<property key="captionfalse" type="translatableString" required="false">
+			<caption>False label (Boolean attribute)</caption>
+			<category>Behavior</category>
+			<description>In the case of the target attribute being a boolean, the text for the label can be defined here.</description>
+		</property>
+		<property key="readonly" type="boolean" required="true" defaultValue="false">
+		  <caption>Read only</caption>
+		  <category>Behavior</category>
+		  <description>If true, the widget is not editable.</description> 
+		</property>		
+		<property key="onchangeAction" type="microflow" required="false">
+			<caption>On change</caption>
+			<category>Events</category>
+			<description></description>
+			<returnType type="Void"></returnType>
+		</property>
+		<property key="iCheckStyle" type="enumeration" defaultValue="flat">
+			<caption>Style</caption>
+			<category>iCheck</category>
+			<description>The iCheck style for the radio buttons</description> 
+			<enumerationValues>
+				<enumerationValue key="flat">Flat</enumerationValue>
+				<enumerationValue key="minimal">Minimal</enumerationValue>
+                <enumerationValue key="square">Square</enumerationValue>
+			</enumerationValues>
+		</property>    
+		<property key="iCheckColor" type="enumeration" defaultValue="aero">
+			<caption>Color</caption>
+			<category>iCheck</category>
+			<description>The iCheck color for the radio buttons</description> 
+			<enumerationValues>
+				<enumerationValue key="aero">Aero</enumerationValue>
+				<enumerationValue key="blue">Blue</enumerationValue>
+                <enumerationValue key="green">Green</enumerationValue>
+				<enumerationValue key="grey">Grey</enumerationValue>
+				<enumerationValue key="orange">Orange</enumerationValue>
+                <enumerationValue key="pink">Pink</enumerationValue>
+				<enumerationValue key="purple">Purple</enumerationValue>
+				<enumerationValue key="red">Red</enumerationValue>
+                <enumerationValue key="yellow">Yellow</enumerationValue>                
+			</enumerationValues>
+		</property>         
+	</properties>
+</widget>
+
