@@ -1,8 +1,7 @@
 # iCheck (Radio Buttons)
 
-This Mendix widget is based on the iCheck jQuery plugin:
+This Mendix widget is based on the iCheck plugin:
 
-http://www.jqueryscript.net/demo/jQuery-Plugin-For-Beautifying-Checkboxes-Radio-Buttons-iCheck/
 https://github.com/fronteed/iCheck
 
 It is cloned from the [Radiobutton List widget](https://appstore.home.mendix.com/link/app/20/Mendix/Radiobutton-List) and provides all the same functionality, along with selecting the iCheck type and color.
