@@ -21,9 +21,9 @@
 define([
     "dojo/_base/declare", "mxui/widget/_WidgetBase", "dijit/_TemplatedMixin",
     "mxui/dom", "dojo/dom", "dojo/query", "dojo/dom-prop", "dojo/dom-geometry", "dojo/dom-attr", "dojo/dom-class", "dojo/dom-style", "dojo/dom-construct", "dojo/on", "dojo/_base/lang", "dojo/text",
-    "dojo/_base/array", "iCheckRadioButtons/lib/jquery-1.11.2", "dojo/text!iCheckRadioButtons/widget/templates/iCheckRadioButtons.html"
+    "dojo/_base/array", "dojo/text!iCheckRadioButtons/widget/templates/iCheckRadioButtons.html"
 ], function (declare, _WidgetBase, _TemplatedMixin,
-    domMx, dom, domQuery, domProp, domGeom, domAttr, domClass, domStyle, domConstruct, on, lang, text, dojoArray, _jQuery, widgetTemplate) {
+    domMx, dom, domQuery, domProp, domGeom, domAttr, domClass, domStyle, domConstruct, on, lang, text, dojoArray, widgetTemplate) {
     "use strict";
 
     // Declare widget.
@@ -189,7 +189,7 @@ define([
          * ======================
          */
         _initRadioButtonList: function (enumObj) {
-            var nd = domConstruct.create,
+            var $ = domConstruct.create,
                 i = 0,
                 attrName = null,
                 key = null,
@@ -208,13 +208,13 @@ define([
                 if (enumObj.hasOwnProperty(key)) {
                     radioid = this.entity + "_" + this.id + "_" + i;
 
-                    labelNode = nd("label");
+                    labelNode = $("label");
 
-                    iCheckNode = nd("div", {
+                    iCheckNode = $("div", {
                         "class": "iradio_" + this.iCheckStyle + "-" + this.iCheckColor
                     });
 
-                    rbNode = nd("input", {
+                    rbNode = $("input", {
                         "type": "radio",
                         "value": key,
                         "id": radioid
@@ -223,9 +223,13 @@ define([
                     domAttr.set(rbNode, "name", "radio" + this._mxObj.getGuid() + "_" + this.id);
 
                     this.keyNodeArray[key] = rbNode;
+                    
+                    var labSyle = "margin-left: 15px; margin-right: 5px;";
 
                     if (this._attrDisable) {
                         domClass.add(iCheckNode, "disabled");
+                        domClass.add(labelNode, "defaultCursor");
+                        labSyle += "cursor:default;";
                     }
 
                     if (attrName === key) {
@@ -243,9 +247,9 @@ define([
                         }
                     }
 
-                    textDiv = nd("label", {
+                    textDiv = $("label", {
                         "for": "radio" + this._mxObj.getGuid() + "_" + this.id,
-                        "style": "margin-left: 15px; margin-right: 5px;"
+                        "style": labSyle
                     });
 
                     textDiv.innerHTML = enumObj[key];
@@ -260,7 +264,7 @@ define([
                         domClass.add(labelNode, "radio-inline");
                         domConstruct.place(labelNode, this.domNode, "last");
                     } else {
-                        radiodiv = nd("div", {
+                        radiodiv = $("div", {
                             "class": "radio"
                         });
                         domConstruct.place(labelNode, radiodiv, "last");

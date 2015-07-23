@@ -17,10 +17,14 @@
     margin-left: 30px;
 }
 
+.defaultCursor {
+    cursor: default !important;
+}
+
 /* iCheck plugin Minimal skin
 ----------------------------------- */
-.icheckbox_minimal,
-.iradio_minimal {
+.icheckbox_minimal-black,
+.iradio_minimal-black {
     display: inline-block;
     *display: inline;
     vertical-align: middle;
@@ -33,44 +37,44 @@
     cursor: pointer;
 }
 
-.icheckbox_minimal {
+.icheckbox_minimal-black {
     background-position: 0 0;
 }
-    .icheckbox_minimal.hover {
+    .icheckbox_minimal-black.hover {
         background-position: -20px 0;
     }
-    .icheckbox_minimal.checked {
+    .icheckbox_minimal-black.checked {
         background-position: -40px 0;
     }
-    .icheckbox_minimal.disabled {
+    .icheckbox_minimal-black.disabled {
         background-position: -60px 0;
         cursor: default;
     }
-    .icheckbox_minimal.checked.disabled {
+    .icheckbox_minimal-black.checked.disabled {
         background-position: -80px 0;
     }
 
-.iradio_minimal {
+.iradio_minimal-black {
     background-position: -100px 0;
 }
-    .iradio_minimal.hover {
+    .iradio_minimal-black.hover {
         background-position: -120px 0;
     }
-    .iradio_minimal.checked {
+    .iradio_minimal-black.checked {
         background-position: -140px 0;
     }
-    .iradio_minimal.disabled {
+    .iradio_minimal-black.disabled {
         background-position: -160px 0;
         cursor: default;
     }
-    .iradio_minimal.checked.disabled {
+    .iradio_minimal-black.checked.disabled {
         background-position: -180px 0;
     }
 
 /* HiDPI support */
 @media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-    .icheckbox_minimal,
-    .iradio_minimal {
+    .icheckbox_minimal-black,
+    .iradio_minimal-black {
         background-image: url(RadioButtonList/widget/ui/minimal/minimal@2x.png);
         -webkit-background-size: 200px 20px;
         background-size: 200px 20px;
@@ -87,7 +91,7 @@
     padding: 0;
     width: 18px;
     height: 18px;
-    background: url(RadioButtonList/widget/ui/red.png) no-repeat;
+    background: url(RadioButtonList/widget/ui/minimal/red.png) no-repeat;
     border: none;
     cursor: pointer;
 }
@@ -610,8 +614,8 @@
 
 /* iCheck plugin Square skin
 ----------------------------------- */
-.icheckbox_square,
-.iradio_square {
+.icheckbox_square-black,
+.iradio_square-black {
     display: inline-block;
     *display: inline;
     vertical-align: middle;
@@ -624,44 +628,44 @@
     cursor: pointer;
 }
 
-.icheckbox_square {
+.icheckbox_square-black {
     background-position: 0 0;
 }
-    .icheckbox_square.hover {
+    .icheckbox_square-black.hover {
         background-position: -24px 0;
     }
-    .icheckbox_square.checked {
+    .icheckbox_square-black.checked {
         background-position: -48px 0;
     }
-    .icheckbox_square.disabled {
+    .icheckbox_square-black.disabled {
         background-position: -72px 0;
         cursor: default;
     }
-    .icheckbox_square.checked.disabled {
+    .icheckbox_square-black.checked.disabled {
         background-position: -96px 0;
     }
 
-.iradio_square {
+.iradio_square-black {
     background-position: -120px 0;
 }
-    .iradio_square.hover {
+    .iradio_square-black.hover {
         background-position: -144px 0;
     }
-    .iradio_square.checked {
+    .iradio_square-black.checked {
         background-position: -168px 0;
     }
-    .iradio_square.disabled {
+    .iradio_square-black.disabled {
         background-position: -192px 0;
         cursor: default;
     }
-    .iradio_square.checked.disabled {
+    .iradio_square-black.checked.disabled {
         background-position: -216px 0;
     }
 
 /* HiDPI support */
 @media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-    .icheckbox_square,
-    .iradio_square {
+    .icheckbox_square-black,
+    .iradio_square-black {
         background-image: url(RadioButtonList/widget/ui/square/square@2x.png);
         -webkit-background-size: 240px 24px;
         background-size: 240px 24px;
@@ -1201,8 +1205,8 @@
 
 /* iCheck plugin Flat skin
 ----------------------------------- */
-.icheckbox_flat,
-.iradio_flat {
+.icheckbox_flat-black,
+.iradio_flat-black {
     display: inline-block;
     *display: inline;
     vertical-align: middle;
@@ -1215,38 +1219,38 @@
     cursor: pointer;
 }
 
-.icheckbox_flat {
+.icheckbox_flat-black {
     background-position: 0 0;
 }
-    .icheckbox_flat.checked {
+    .icheckbox_flat-black.checked {
         background-position: -22px 0;
     }
-    .icheckbox_flat.disabled {
+    .icheckbox_flat-black.disabled {
         background-position: -44px 0;
         cursor: default;
     }
-    .icheckbox_flat.checked.disabled {
+    .icheckbox_flat-black.checked.disabled {
         background-position: -66px 0;
     }
 
-.iradio_flat {
+.iradio_flat-black {
     background-position: -88px 0;
 }
-    .iradio_flat.checked {
+    .iradio_flat-black.checked {
         background-position: -110px 0;
     }
-    .iradio_flat.disabled {
+    .iradio_flat-black.disabled {
         background-position: -132px 0;
         cursor: default;
     }
-    .iradio_flat.checked.disabled {
+    .iradio_flat-black.checked.disabled {
         background-position: -154px 0;
     }
 
 /* HiDPI support */
 @media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-    .icheckbox_flat,
-    .iradio_flat {
+    .icheckbox_flat-black,
+    .iradio_flat-black {
         background-image: url(RadioButtonList/widget/ui/flat/flat@2x.png);
         -webkit-background-size: 176px 22px;
         background-size: 176px 22px;

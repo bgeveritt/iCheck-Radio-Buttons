@@ -61,6 +61,7 @@
 			<description>The iCheck color for the radio buttons</description> 
 			<enumerationValues>
 				<enumerationValue key="aero">Aero</enumerationValue>
+                <enumerationValue key="black">Black</enumerationValue>
 				<enumerationValue key="blue">Blue</enumerationValue>
                 <enumerationValue key="green">Green</enumerationValue>
 				<enumerationValue key="grey">Grey</enumerationValue>
